@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+:root {
+    --primary-color: rgb(236, 213, 187);
+    --secondary-color: rgb(221, 168, 147);
+    --text-color: rgb(0, 0, 0);
+    --background-color: rgb(240, 238, 219);
+    --icon-color: rgb(75, 70, 72);
+    --icon-hover-color: rgb(134, 66, 69);
+    --border-color: rgb(238, 233, 230);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+/* - - - - - - - TOP BAR  - - - - - - - */
+.top-bar{
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgb(243, 209, 215);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.search-bar {
+    padding-left: 20px;
+    flex-grow: 1;
+}
+
+.search-bar input {
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.socials{
+    margin-right: 15vh;
+}
+.socials a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: black;
+    font-size: 18px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.socials a:hover{
+    color: rgb(175, 100, 144);
+}
+hr{
+    width: 90%;
+    margin-left: 10vh;
+    border-top: 2px solid black;
+}
+
+/* - - - - HAMBURGUER - - - - - */
+.hamburger-menu {
+    display: none; 
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 11;
+    position: relative;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+}
+
+.menu-content {
+    display: none; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(210, 216, 175, 0.95);
+    z-index: 10;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.3s ease;
+}
+
+.menu-toggle:checked + .hamburger-menu + .menu-content {
+    display: flex; 
+    left: 0; 
+}
+
+.menu-links a {
+    display: block;
+    font-size: 38px;
+    color: black;
+    text-decoration: none;
+    margin: 55px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu-links a:hover {
+    color: rgb(117, 48, 106);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* - - - - - - - MENU NAV  - - - - - - - */
+nav{
+    display:flex;
+    justify-content: space-between;
+    padding:  2vh 5vh;
+}
+
+.secondary-menu, .primary-menu{
+    line-height: 25vh;
+    height: 25vh;
+}
+
+.secondary-menu a, .primary-menu a{
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.secondary-menu a{
+    margin-left: 5vh;
+}
+.primary-menu a{
+    margin-right: 5vh;
+}
+.secondary-menu a:hover, .primary-menu a:hover{
+    color: rgb(117, 48, 106);
+}
+
+
+/* - - - - - - - RECIPE - - - - - - - - - */
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 30px 70px;
+}
+
+.recipe{
+    width: 60%;
+    margin-right: 10%;
+}
+
+.recipe h1{
+    font-size: 40px;
+}
+
+.icons {
+    display: flex; 
+    margin: 10px 0; 
+}
+
+.icon {
+    background-color: #007bff; 
+    color: white;
+    border-radius: 50%; 
+    width: 30px; 
+    height: 30px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    margin: 0 5px; 
+    font-size: 14px;
+    font-weight: bold; 
+}
+
+.gf{
+    background-color: rgb(216, 182, 210);
+    color: rgb(71, 69, 69);
+}
+.ns{
+    background-color: rgb(78, 73, 80);
+}
+.df{
+    background-color: rgb(25, 122, 32);
+}
+.vg{
+    background-color: rgb(211, 82, 73);
+}
+.v{
+    background-color: rgb(216, 130, 59);
+}
+
+.recipe img{
+    width: 70vh;
+    height: auto; 
+}
+
+.recipe-text{
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;
+    margin: 30px 0;
+}
+
+/* RECIPE DESCRIPTION*/
+.recipe-container {
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-container .intro{
+    display: flex;
+}
+.header h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 25px;
+    text-align: justify;
+}
+
+.author {
+    margin-top: 10px;
+    font-style: italic;
+    color: #888;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.print-btn, .save-btn {
+    padding: 10px 20px;
+    border: 1px solid #333;
+    background-color: white;
+    cursor: pointer;
+    width: 70%;
+    margin: 10px 0;
+}
+
+.print-btn:hover, .save-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.actions img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.actions .rating {
+    margin-right: 0;
+    align-items: end;
+}
+
+.stars {
+    color: gold;
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.time-box {
+    text-align: center;
+}
+
+.time-box h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.time-box p {
+    margin: 5px 0 0;
+}
+
+.details {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+
+/* written recipe*/
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+    color: #333;
+}
+
+ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+    line-height: 22px;
+}
+
+ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+ol li {
+    margin-bottom: 10px;
+    line-height: 22px;
+}
+/* - - - - - - SEARCH BAR - - - - */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid rgb(32, 32, 32); 
+    padding: 15px;
+    width: 100%;
+    margin: 0 0 40px 0;
+}
+
+.search-input {
+    border: none; /* Sin bordes en el input */
+    outline: none; /*Sin borde cuando está en foco */
+    flex-grow: 1; /* input en espacio disponible */
+    font-size: 16px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.search-icon {
+    color: black; 
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+/* - - - - - - ABOUT - - - - - - */
+.about-section {
+    max-width: 500px;
+    margin: 10px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #fdf2f5;
+    padding: 20px;
+}
+
+.about-profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.about-details {
+    padding: 0 15px;
+}
+
+.about-title {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.about-description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.about-btn {
+    display: inline-block;
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.about-btn:hover {
+    background-color: #e55335;
+}
+
+/* - - - - - - RECIPE KEY - - - - - */
+.recipe-key{
+    background-color: #fdf2f5;
+    padding: 20px;
+    margin: 30px 0;
+}
+.recipe-key h4{
+    font-size: 20px;
+    text-align: center;
+    color:#363636;
+}
+.icon-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon-combo{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-combo .icon{
+    margin-right: 15px;
+}
+
+/* - - - - - - FOOTER - - - - - - - */
+
+.side-bar{
+    width: 30%;
+}
+
+.footer-header{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.socials-footer{
+    margin-top: 40px;
+}
+
+.slogan-footer {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.footer-header img{
+    margin-right: 100px;
+    max-width: 100%;
+    height: auto;
+}
+
+hr{
+    margin-top: 30px;
+}
+
+.footer-menu, .privacy {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    width: 40%
+}
+
+.footer-menu a{
+    font-size: 20px;
+    color: rgb(39, 39, 39);
+}
+
+.privacy a{
+    font-size: 12px;
+    color:rgb(153, 152, 152)
+}
+.footer-menu a, .privacy a{
+    text-decoration: none;
+    margin: 20px 0;
+}
+.footer-menu a:hover, .privacy a:hover{
+    color: rgb(117, 46, 77);
+}
+
+@media (max-width: 768px) {
+    .top-bar{
+        margin-top: -70px;
+        margin-right: 0;
+        width: 100%;
+        padding: 5vh;
+    }
+    .logo-area{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .hamburger-menu {
+        display: flex;
+        margin: 20px;
+    }
+
+    .search-bar, .socials, .secondary-menu, .primary-menu {
+        display: none; 
+    }
+    .container {
+        flex-direction: column;
+    }
+    hr{
+        margin-left: 5vh;
+    }
+    .recipe {
+        flex: 1 1 100%;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .side-bar {
+        display: none;
+        margin-left: 0;
+    }
+    .secondary-menu, .primary-menu {
+        flex-direction: column;
+    }
+
+    .actions{
+        display: none;
+    }
+
+    .recipe-container{
+        flex: 1 1 100%;
+        width: 100%;
+        border: none;
+    }
+
+    .footer-menu, .privacy {
+        margin: 20px auto; 
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1350px){
+    .side-bar {
+        display: none;
+        margin-left: 0;
+    }
+
+    .top-bar{
+        margin-top: -70px;
+        padding: 5vh;
+    };
+    .search-container{
+        display: none;
+    }
+    .primary-menu{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo-area{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .hamburger-menu {
+        display: flex;
+        margin: 20px;
+    }
+
+    .search-bar, .socials, .secondary-menu, .primary-menu {
+        display: none; 
+    }
+    .container {
+        flex-direction: column;
+    }
+    .recipe {
+        flex: 1 1 100%;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .secondary-menu, .primary-menu {
+        flex-direction: column;
+    }
+
+    .actions{
+        display: none;
+    }
+
+    .recipe-container{
+        flex: 1 1 100%;
+        width: 100%;
+        border: none;
+    }
+    hr{
+        margin-left: 5vh;
+    }
+}
