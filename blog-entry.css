@@ -547,6 +547,16 @@ hr{
         flex-direction: column; 
         align-items: center; 
     }
+    .recipe img{
+        width: 30vh;
+    }
+    .logo-area img{
+        width: 30vh;
+    }
+    .footer-header img{
+        width: 7vh;
+        height: 7vh;
+    }
 }
 
 
@@ -605,5 +615,15 @@ hr{
     }
     hr{
         margin-left: 5vh;
+    }
+    .recipe img{
+        width: 50vh;
+    }
+    .logo-area img{
+        width: 40vh;
+    }
+    .footer-header img{
+        width: 7vh;
+        height: 7vh;
     }
 }

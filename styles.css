@@ -495,6 +495,9 @@ hr{
         display: flex;
         justify-content: center;
     }
+    .logo{
+        width: 40vh;
+    }
     .hamburger-menu {
         display: flex;
         margin: 20px;
@@ -502,6 +505,7 @@ hr{
 
     hr{
         margin-left: 5vh;
+        width: 80%;
     }
     .secondary-menu, .primary-menu {
         flex-direction: column;
@@ -523,6 +527,9 @@ hr{
     .recipe-card {
         width: 100%; 
         margin: 10px 0; 
+    }
+    .recipe-card img {
+        height: 60vh; 
     }
     
     /* PICK OF THE WEEK */
@@ -607,6 +614,9 @@ hr{
         display: flex;
         justify-content: center;
     }
+    .logo-area img{
+        width: 50vh;
+    }
     .hamburger-menu {
         display: flex;
         margin: 20px;
@@ -630,6 +640,10 @@ hr{
         width: calc(50% - 14px); /* Adjust width to fit 2 cards per row */
         margin: 35px 5px;
     }
+    .recipe-card img {
+        height: 60vh; 
+    }
+    
     /* PICK OF THE WEEK*/
     .text{
         margin: 15px;
