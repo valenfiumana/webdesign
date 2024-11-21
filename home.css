@@ -1,0 +1,698 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+:root {
+    --primary-color: rgb(236, 213, 187);
+    --secondary-color: rgb(221, 168, 147);
+    --text-color: rgb(0, 0, 0);
+    --background-color: rgb(240, 238, 219);
+    --icon-color: rgb(75, 70, 72);
+    --icon-hover-color: rgb(134, 66, 69);
+    --border-color: rgb(238, 233, 230);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+/* - - - - - - - TOP BAR  - - - - - - - */
+.top-bar{
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgb(243, 209, 215);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.search-bar {
+    padding-left: 20px;
+    flex-grow: 1;
+}
+
+.search-bar input {
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.socials{
+    margin-right: 15vh;
+}
+.socials a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: black;
+    font-size: 18px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.socials a:hover{
+    color: rgb(175, 100, 144);
+}
+hr{
+    width: 90%;
+    margin-left: 10vh;
+    border-top: 2px solid black;
+}
+
+/* - - - - HAMBURGUER - - - - - */
+.hamburger-menu {
+    display: none; 
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 11;
+    position: relative;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+}
+
+.menu-content {
+    display: none; 
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(210, 216, 175, 0.95);
+    z-index: 10;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.3s ease;
+}
+
+.menu-toggle:checked + .hamburger-menu + .menu-content {
+    display: flex; 
+    left: 0; 
+}
+
+.menu-links a {
+    display: block;
+    font-size: 38px;
+    color: black;
+    text-decoration: none;
+    margin: 55px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu-links a:hover {
+    color: rgb(202, 123, 146);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* - - - - - - - MENU NAV  - - - - - - - */
+nav{
+    display:flex;
+    justify-content: space-between;
+    padding:  2vh 5vh;
+}
+
+.secondary-menu, .primary-menu{
+    line-height: 25vh;
+    height: 25vh;
+}
+
+.secondary-menu a, .primary-menu a{
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.secondary-menu a{
+    margin-left: 5vh;
+}
+.primary-menu a{
+    margin-right: 5vh;
+}
+.secondary-menu a:hover, .primary-menu a:hover{
+    color: rgb(117, 48, 106);
+}
+
+
+/* - - - - - - - PAGE HEADER  - - - - - - - */
+.page-header{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.slogan{
+    margin-left: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.slogan img{
+    margin-right: 20px;
+    width: 7vh;
+}
+
+.slogan .text {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.show-everything{
+    margin-right: 12vh;
+}
+
+.show-everything a{
+    text-decoration: none;
+    color: black;
+    font-family: "Roboto Mono", monospace;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.show-everything a:hover{
+    color: rgb(170, 132, 157);
+}
+
+/* - - - - - - - RECENT RECIPES  - - - - - - - */
+.recipes h2{
+    margin-left: 40px;
+    font-size: 2em;
+}
+
+.recent-recipes {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    margin: 30px 60px; 
+}
+
+.recent-recipes a {
+    margin: 0 8px; 
+}
+
+.recipe-card{
+    width: 300px;
+    text-align: center;
+    margin: 0 7px;
+    width: calc(25% - 14px);
+
+}
+.recipe-card img {
+    max-width: 100%; 
+    height: 80vh; 
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.recipe-card img:hover {
+    transform: scale(1.05); 
+}
+
+.recipe-card .icons {
+    display: flex; 
+    justify-content: center; 
+    margin: 10px 0; 
+}
+
+.recipe-card .icon {
+    color: white;
+    border-radius: 50%; 
+    width: 30px; 
+    height: 30px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    margin: 0 5px; 
+    font-size: 14px;
+    font-weight: bold; 
+}
+
+.recipe-card .gf{
+    background-color: rgb(216, 182, 210);
+    color: rgb(71, 69, 69);
+}
+.recipe-card .ns{
+    background-color: rgb(78, 73, 80);
+}
+.recipe-card .df{
+    background-color: rgb(25, 122, 32);
+}
+.recipe-card .vg{
+    background-color: rgb(211, 82, 73);
+}
+.recipe-card .v{
+    background-color: rgb(216, 130, 59);
+}
+.recipe-card h3 {
+    margin: 5px 0; 
+    font-size: 20px;
+}
+.recipe-card .title{
+    margin: 5px 0; 
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(51, 51, 51);
+}
+
+.recipe-card .title span{
+    margin: 5px 0; 
+    display: block;
+}
+.recipe-card .button {
+    background-color: #ec8f78;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.recipe-card .button:hover{
+    filter: brightness(1.1);
+}
+
+.recipe-card .bttn-salmon {
+    background-color: #e07979;
+}
+
+.recipe-card .bttn-red {
+    background-color: #e64a4a;
+}
+
+.recipe-card .bttn-orange {
+    background-color: #bb6400;
+}
+
+.recipe-card .bttn-green {
+    background-color: #13421b;
+}
+
+/* - - - - - - - PICK OF THE WEEK - - - - - - - */
+.week-pick{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 80px; 
+    border: 2px solid #eceaea; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    background-color: white;
+    width: 90%;
+}
+
+.week-pick .text {
+    max-width: 50%;
+    margin-left: 50px;
+}
+
+.week-pick .subtitle {
+    display: block; 
+    font-size: 2vh; 
+    color: #333; 
+    margin-bottom: 10px; 
+    font-family: "Roboto Mono", monospace;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px; 
+    font-size: 5vh; 
+    color: rgb(34, 34, 34); 
+    font-weight: bold; 
+}
+
+
+.week-pick p {
+    font-size: 2vh; 
+    color: #555; 
+    margin: 20px 40px; 
+    margin-bottom: 50px;
+}
+
+.view-recipe-button {
+    background-color: transparent; 
+    color: black;
+    border: 2px solid black; 
+    padding: 20px 30px; 
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 2px; 
+    font-family: "Roboto Mono", monospace;
+    font-weight: 700;
+}
+
+
+.view-recipe-button:hover {
+    cursor: pointer;
+}
+
+.week-pick img {
+    max-width: 100%;
+    height: 70vh; 
+    padding: 20px;
+}
+
+/* - - - - - - - FORM  - - - - - - - */
+.subscription-banner{
+    display: flex;
+    justify-content: space-around;
+    margin: -40px 80px 50px 80px;
+    background-color: #13421b;
+    padding: 7vh 2vh 5vh 2vh;
+}
+
+.question{
+    display: flex;
+    flex-direction: column;
+}
+
+.question span{
+    font-size: 26px;
+    margin-left: 30px;
+    font-weight: 600;
+    color:#e2bcd1;
+}
+
+.subscription-banner .description{
+    color: white;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.subscription-banner .description span{
+    display: block;
+}
+
+form input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 70%;
+    background: #f1f1f1;
+}
+
+form button {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    background: #f78ba6;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+form button:hover {
+    background: #793669;
+}
+form::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* - - - - - - FOOTER - - - - - - - */
+.footer-header{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.socials-footer{
+    margin-top: 40px;
+}
+
+.slogan-footer {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.footer-header img{
+    margin-right: 100px;
+}
+
+hr{
+    margin-top: 30px;
+}
+
+.footer-menu, .privacy {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    width: 40%
+}
+
+.footer-menu a{
+    font-size: 20px;
+}
+
+.privacy a{
+    font-size: 12px;
+}
+.footer-menu a, .privacy a{
+    text-decoration: none;
+    color: rgb(39, 39, 39);
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    /* MENU */
+    .top-bar{
+        margin-top: -70px;
+        margin-right: 0;
+        width: 100%;
+        padding: 5vh;
+    }
+    .logo-area{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .logo{
+        width: 40vh;
+    }
+    .hamburger-menu {
+        display: flex;
+        margin: 20px;
+    }
+
+    hr{
+        margin-left: 5vh;
+        width: 80%;
+    }
+    .secondary-menu, .primary-menu {
+        flex-direction: column;
+    }
+    /* HIDE UNUSED THINGS */
+    .search-bar, .socials, .secondary-menu, .primary-menu,
+    .show-everything, .recipes  {
+        display: none; 
+    }
+    
+    /* RECIPE CARDS */
+    .recipe {
+        flex: 1 1 100%;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    /* RECIPE CARDS */
+    .recipe-card {
+        width: 100%; 
+        margin: 10px 0; 
+    }
+    .recipe-card img {
+        height: 60vh; 
+    }
+    
+    /* PICK OF THE WEEK */
+    .week-pick {
+        flex-direction: column; 
+        text-align: center; 
+        margin: 20px;
+    }
+    .week-pick img {
+        max-width: 90%; 
+        height: 60vh; 
+        margin: 20px 0;
+    }
+    .week-pick .text {
+        max-width: 100%; 
+        margin: 20px 0; 
+        padding-top: 20px;
+    }
+
+    .week-pick .title{
+        font-size: 2em;
+    }
+    /* FORM */
+    .subscription-banner {
+        flex-direction: column;
+        align-items: center; 
+        margin: 20px; 
+    }
+    .question {
+        align-items: center; 
+        margin-bottom: 20px; 
+    }
+    .question span {
+        margin-left: 0; 
+        text-align: center; 
+    }
+    .subscription-banner .description {
+        text-align: center; 
+        margin-bottom: 20px;
+    }
+    form {
+        width: 100%; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    form input[type=text] {
+        width: 100%; 
+        margin-bottom: 10px; 
+        float: none; 
+    }
+    form button {
+        width: 100%; 
+        float: none; /* ! resetear float */
+    }
+    /* FOOTER */
+    .footer-menu, .privacy {
+        margin: 20px auto; 
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1350px){
+    /* MENU */
+    .top-bar{
+        margin-top: -70px;
+        padding: 5vh;
+    }
+    .search-container{
+        display: none;
+    }
+    .primary-menu{
+        display: flex;
+        flex-direction: column;
+    }
+    .logo-area{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .logo-area img{
+        width: 50vh;
+    }
+    .hamburger-menu {
+        display: flex;
+        margin: 20px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .secondary-menu, .primary-menu {
+        flex-direction: column;
+    }
+    hr{
+        margin-left: 5vh;
+    }
+    /* HIDE UNUSED THINGS */
+    .search-bar, .socials, .secondary-menu, .primary-menu,
+    .show-everything, .recipes {
+        display: none; 
+    }
+    /* RECIPE CARDS */
+    .recipe-card {
+        width: calc(50% - 14px); /* Adjust width to fit 2 cards per row */
+        margin: 35px 5px;
+    }
+    .recipe-card img {
+        height: 60vh; 
+    }
+    
+    /* PICK OF THE WEEK*/
+    .text{
+        margin: 15px;
+    }
+    .week-pick img{
+        height: 50vh; 
+        padding-top: 20px;
+    }
+    .week-pick{
+        padding-bottom: 20px;
+    }
+    .week-pick .text {
+        margin: 20px 0; 
+        padding-top: 20px;
+    }
+    .week-pick .title{
+        font-size: 2em;
+    }
+    /*FORM*/
+    .subscription-banner {
+        flex-direction: column;
+        align-items: center; 
+        margin: 20px; 
+    }
+    .question {
+        align-items: center; 
+        margin-bottom: 20px; 
+    }
+    .question span {
+        margin-left: 0; 
+        text-align: center; 
+    }
+    .subscription-banner .description {
+        text-align: center; 
+        margin-bottom: 20px;
+    }
+    form {
+        width: 100%; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    form input[type=text] {
+        width: 100%; 
+        margin-bottom: 10px; 
+        float: none; 
+    }
+    form button {
+        width: 100%; 
+        float: none; /* ! resetear float */
+    }
+}
