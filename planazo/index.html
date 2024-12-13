@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles/styles.css" rel="stylesheet">
+  <link rel="icon" href="img/mountain.png" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/bf8631ba4b.js" crossorigin="anonymous"></script>
+  <title>Planazo</title>
+</head>
+<body>
+  <!-- Top banner -->
+  <div class="banner-container">
+    <div class="moving-banner">
+      <span>3 cuotas sin interés | 10% de descuento pagando con transferencia</span>
+      <span>3 cuotas sin interés | 10% de descuento pagando con transferencia</span>
+      <span>3 cuotas sin interés | 10% de descuento pagando con transferencia</span>
+    </div>
+  </div>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <a href="#"><img src="img/planazo.png" alt="logo"/></a>
+    </div>
+    <ul>
+      <li>
+        <a href="index.html">Experiencias</a>
+      </li>
+      <li>
+        <a href="nosotros.html">Quiénes somos</a>
+      </li>
+      <li>
+        <a href="contacto.html">Contactanos</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+  </nav>
+  <div class="menubar">
+    <ul>
+      <li>
+        <a href="#">Experiencias</a>
+      </li>
+      <li>
+        <a href="nosotros.html">Quiénes somos</a>
+      </li>
+      <li>
+        <a href="contacto.html">Contactanos</a>
+      </li>
+    </ul>
+  </div>
+  <div class="carousel">
+    <ul class="slides">
+      <!-- Slide 1 -->
+      <input type="radio" name="radio-buttons" id="img-1" checked />
+      <li class="slide-container">
+        <div class="slide-image">
+          <img src="img/pantalla1.jpg">
+          <div class="hero-text">
+            <h1>Descubrí la ciudad</h1>
+            <p>Una excelente combinación de historia y arte.</p>
+            <button>Más Información</button>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <label for="img-3" class="prev-slide">&lsaquo;</label>
+          <label for="img-2" class="next-slide">&rsaquo;</label>
+        </div>
+      </li>
+  
+      <!-- Slide 2 -->
+      <input type="radio" name="radio-buttons" id="img-2" />
+      <li class="slide-container">
+        <div class="slide-image">
+          <img src="img/pantalla2.jpg">
+          <div class="hero-text">
+            <h1>Explorá nuevos horizontes</h1>
+            <p>¡Aventuras por todas partes!</p>
+            <button>Descubrir más</button>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <label for="img-1" class="prev-slide">&lsaquo;</label>
+          <label for="img-3" class="next-slide">&rsaquo;</label>
+        </div>
+      </li>
+  
+      <!-- Slide 3 -->
+      <input type="radio" name="radio-buttons" id="img-3" />
+      <li class="slide-container">
+        <div class="slide-image">
+          <img src="img/pantalla3.jpg">
+          <div class="hero-text">
+            <h1>Viajá con Nosotros</h1>
+            <p>Y te llevaremos a un viaje inolvidable</p>
+            <button>¡Yo quiero!</button>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <label for="img-2" class="prev-slide">&lsaquo;</label>
+          <label for="img-1" class="next-slide">&rsaquo;</label>
+        </div>
+      </li>
+  
+      <!-- Puntos navegación -->
+      <div class="carousel-dots">
+        <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+        <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+        <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+      </div>
+    </ul>
+  </div>
+  <!----- Experiencias ----->
+  <div class="experience-grid">
+    <!---- CARD 1 ---->
+    <div class="experience-card card1" onclick="openModal('modal1')">
+      <img src="img/lugares/paseo caminito.jpg" alt="Experience Image">
+      <div class="experience-info">
+        <h3>Recorrido por Caminito</h3>
+        <p> 📍 Buenos Aires</p>
+        <p>👥 2 personas</p>
+        <p class="price">$25,000</p>
+      </div>
+    </div>
+    <!-- Modal 1-->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal('modal1')">&times;</span>
+      <h2>Recorrido por Caminito</h2>
+      <div class="container">
+        <div>
+          <img src="img/lugares/paseo caminito.jpg" alt="Experience Image">
+        </div>
+        <div class="sobre-experiencia">
+          <h4>Acerca de esta experiencia:</h4>
+          <p>Disfruta de un recorrido único por Caminito, explorando su arte y cultura.</p>
+          <p><span>📍</span>    Buenos Aires</p>
+          <p><span>👥</span>  Para 2 personas</p>
+          <p><span>📆</span>  Se puede usar hasta el 24/10/2025</p>
+          <p class="price">$25,000</p>
+          <img src="img/medios-pago.PNG" alt="">
+        </div>
+      </div>
+      <h3>¡Hacé tu Reserva!</h3>
+      <form>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+        
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+        
+        <label for="date">Fecha del Recorrido:</label>
+        <input type="date" id="date" name="date" required>
+        
+        <button type="submit" class="submit-button">Reservar</button>
+      </form>
+    </div>
+  </div>
+    <!---- CARD 2 ----->
+    <div class="experience-card card2" onclick="openModal('modal2')">
+      <img src="img/lugares/visita cataratas.jpg" alt="Experience Image">
+      <div class="experience-info">
+        <h3>Tour Cataratas del Iguazu</h3>
+        <p>📍 Misiones</p>
+        <p>👤 1 persona</p>
+        <p class="price">$41,000</p>
+      </div>
+    </div>
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal('modal2')">&times;</span>
+        <h2>Tour Cataratas del Iguazu</h2>
+        <div class="container">
+          <div>
+            <img src="img/lugares/visita cataratas.jpg" alt="Experience Image">
+          </div>
+          <div class="sobre-experiencia">
+            <h4>Acerca de esta experiencia:</h4>
+            <p>Disfruta de un recorrido único por Caminito, explorando su arte y cultura.</p>
+            <p><span>📍</span>    Misiones</p>
+            <p><span>👥</span>  1 persona</p>
+            <p><span>📆</span>  Se puede usar hasta el 24/10/2025</p>
+            <p class="price">$25,000</p>
+            <img src="img/medios-pago.PNG" alt="">
+          </div>
+        </div>
+        <h3>¡Hacé tu Reserva!</h3>
+        <form>
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+          
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+          
+          <label for="date">Fecha del Recorrido:</label>
+          <input type="date" id="date" name="date" required>
+          
+          <button type="submit" class="submit-button">Reservar</button>
+        </form>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="experience-card card3" onclick="openModal('modal3')">
+      <img src="img/lugares/visita cerro.jpg" alt="Experience Image">
+      <div class="experience-info">
+        <h3>Tour Cerro 7 Colores</h3>
+        <p>📍 Jujuy</p>
+        <p>👤 2 personas</p>
+        <p class="price">$59,000</p>
+      </div>
+    </div>
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal('modal3')">&times;</span>
+        <h2>Tour Cerro 7 Colores</h2>
+        <div class="container">
+          <div>
+            <img src="img/lugares/visita cerro.jpg" alt="Experience Image">
+          </div>
+          <div class="sobre-experiencia">
+            <h4>Acerca de esta experiencia:</h4>
+            <p>Disfruta de un recorrido único por Caminito, explorando su arte y cultura.</p>
+            <p><span>📍</span>    Misiones</p>
+            <p><span>👥</span>  1 persona</p>
+            <p><span>📆</span>  Se puede usar hasta el 24/10/2025</p>
+            <p class="price">$25,000</p>
+            <img src="img/medios-pago.PNG" alt="">
+          </div>
+        </div>
+        <h3>¡Hacé tu Reserva!</h3>
+        <form>
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+          
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+          
+          <label for="date">Fecha del Recorrido:</label>
+          <input type="date" id="date" name="date" required>
+          
+          <button type="submit" class="submit-button">Reservar</button>
+        </form>
+      </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="experience-card card4" onclick="openModal('modal4')">
+      <img src="img/lugares/visita glaciar.jpg" alt="Experience Image">
+      <div class="experience-info">
+        <h3>Visita Glaciar Perito Moreno</h3>
+        <p>📍 Santa Cruz</p>
+        <p>👤 2 personas</p>
+        <p class="price">$71,000</p>
+      </div>
+    </div>
+    <!-- Modal 4 -->
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal('modal4')">&times;</span>
+        <h2>Visita Glaciar Perito Moreno</h2>
+        <div class="container">
+          <div>
+            <img src="img/lugares/visita glaciar.jpg" alt="Experience Image">
+          </div>
+          <div class="sobre-experiencia">
+            <h4>Acerca de esta experiencia:</h4>
+            <p>Disfruta de un recorrido único por Caminito, explorando su arte y cultura.</p>
+            <p><span>📍</span>    Misiones</p>
+            <p><span>👥</span>  1 persona</p>
+            <p><span>📆</span>  Se puede usar hasta el 24/10/2025</p>
+            <p class="price">$25,000</p>
+            <img src="img/medios-pago.PNG" alt="">
+          </div>
+        </div>
+        <h3>¡Hacé tu Reserva!</h3>
+        <form>
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+          
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+          
+          <label for="date">Fecha del Recorrido:</label>
+          <input type="date" id="date" name="date" required>
+          
+          <button type="submit" class="submit-button">Reservar</button>
+        </form>
+      </div>
+    </div>
+    <!-- Card 5 -->
+    <div class="experience-card">
+      <img src="img/chill/dia de spa.jpg" alt="Experience Image">
+      <div class="experience-info">
+        <h3>Dia de Spa</h3>
+        <p>📍 San Luis</p>
+        <p>👤 2 personas</p>
+        <p class="price">$105,000</p>
+      </div>
+    </div>
+    <!-- Card 6 -->
+    <div class="experience-card">
+      <img src="img/chill/masajes.jpg" alt="Experience Image">
+      <div class="experience-info">
+        <h3>Sesión de Masaje</h3>
+        <p>📍 La Pampa</p>
+        <p>👤 1 persona</p>
+        <p class="price">$80,000</p>
+      </div>
+    </div>
+    <!-- Card 7 -->
+    <div class="experience-card">
+      <img src="img/chill/sauna.jpg" alt="Experience Image">
+      <div class="experience-info">
+        <h3>Sauna</h3>
+        <p>📍 San Juan</p>
+        <p>👤 2 personas</p>
+        <p class="price">$100,000</p>
+      </div>
+    </div>
+    <!-- Card 8 -->
+    <div class="experience-card">
+      <img src="img/chill/paseo bici.jpg" alt="Experience Image">
+      <div class="experience-info">
+        <h3>Paseo en Bicicleta</h3>
+        <p>📍 Buenos Aires</p>
+        <p>👤 4 personas</p>
+        <p class="price">$55,000</p>
+      </div>
+    </div>
+    <!-- Card 9 -->
+    <div class="experience-card">
+      <img src="img/actividades/cata de vino.jpg" alt="Experience Image">
+      <div class="experience-info">
+        <h3>Cata de Vino</h3>
+        <p>📍 Mendoza</p>
+        <p>👤 2 personas</p>
+        <p class="price">$74,000</p>
+      </div>
+    </div>
+    <!-- Card 10 -->
+    <div class="experience-card">
+      <img src="img/actividades/clase de tango.jpg" alt="Experience Image">
+      <div class="experience-info">
+        <h3>Clase de Tango</h3>
+        <p>📍 Buenos Aires</p>
+        <p>👤 1 personas</p>
+        <p class="price">$15,000</p>
+      </div>
+    </div>
+    <!-- Card 11 -->
+    <div class="experience-card">
+      <img src="img/actividades/museo.jpg" alt="Experience Image">
+      <div class="experience-info">
+        <h3>Museo Provincial de Bellas Artes "Emilio Caraffa"</h3>
+        <p>📍 Córdoba</p>
+        <p>👤 1 personas</p>
+        <p class="price">$12,000</p>
+      </div>
+    </div>
+    <!-- Card 12 -->
+    <div class="experience-card">
+      <img src="img/actividades/zoo.jpg" alt="Experience Image">
+      <div class="experience-info">
+        <h3>Zoo</h3>
+        <p>📍 Santa Fe</p>
+        <p>👤 1 personas</p>
+        <p class="price">$38,000</p>
+      </div>
+    </div>
+    <!-- Card 13 -->
+    <div class="experience-card">
+      <img src="img/extremo/paracaidas.jpg" alt="Experience Image">
+      <div class="experience-info">
+        <h3>Paracaidismo</h3>
+        <p>📍 Córdoba</p>
+        <p>👤 1 personas</p>
+        <p class="price">$198,000</p>
+      </div>
+    </div>
+    <!-- Card 14 -->
+    <div class="experience-card">
+      <img src="img/extremo/puenting.jpg" alt="Experience Image">
+      <div class="experience-info">
+        <h3>Puenting</h3>
+        <p>📍 Salta</p>
+        <p>👤 1 personas</p>
+        <p class="price">$39,000</p>
+      </div>
+    </div>
+    <!-- Card 15 -->
+    <div class="experience-card">
+      <img src="img/extremo/rafting.jpg" alt="Experience Image">
+      <div class="experience-info">
+        <h3>Rafting</h3>
+        <p>📍 Mendoza</p>
+        <p>👤 3 personas</p>
+        <p class="price">$130,000</p>
+      </div>
+    </div>
+    <!-- Card 16 -->
+    <div class="experience-card">
+      <img src="img/extremo/tirolesa.jpg" alt="Experience Image">
+      <div class="experience-info">
+        <h3>Tirolesa</h3>
+        <p>📍 Catamarca</p>
+        <p>👤 4 personas</p>
+        <p class="price">$51,000</p>
+      </div>
+    </div>
+  </div>
+  <section id="footer">
+    <div class="main-footer">
+      <!---- Información de contacto ---->
+      <div class="logoinfo">
+        <div class="contact-details">
+          <img src="img/planazo_white.png" alt="logo"/>
+          <li>
+            <div class="fa fa-phone"></div>
+            <a href="tel:+5491123456789">+54 9 11 2345-6789</a>
+          </li>
+          <li>
+            <div class="fa fa-envelope"></div>
+            <a href="mailto:contacto@tudominio.com">contacto@planazo.com</a>
+          </li>
+        </div>
+      </div>
+  
+      <!-- Enlaces sobre nosotros -->
+      <div class="com">
+        <h1>Quienes Somos</h1>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Experiencias</a></li>
+          <li><a href="#">Proyectos</a></li>
+          <li><a href="#">Contáctanos</a></li>
+        </ul>
+      </div>
+  
+      <!-- Redes sociales -->
+      <div class="info">
+        <h1>Redes Sociales</h1>
+        <div class="sociallogos">
+          <div class="logobox">
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-youtube-play"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>© 2024 Todos los derechos reservados</footer>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
